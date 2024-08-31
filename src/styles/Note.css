@@ -1,0 +1,94 @@
+.note-container {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid #ccccccf1;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .note-header {
+    display: flex;
+    align-items: center;
+}
+  
+  .note-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  .note-title {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .note-content {
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .note-date {
+    color: #999;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+  
+  .status-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between the circle and the title */
+}
+
+.status-indicator.completed {
+    background-color: green;
+}
+
+.status-indicator.incomplete {
+    background-color: red;
+}
+  .delete-button {
+    background-color: #fd877f; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #fb6767; /* Darker red */
+  }
+  
+  .edit-button {
+    background-color: #36b1f4; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-button:hover {
+    background-color: #2f91d3; /* Darker red */
+  }
+
+  .cancel-button {
+    background-color: #f436a5; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d32f91; /* Darker red */
+  }
+
