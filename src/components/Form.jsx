@@ -23,11 +23,25 @@ function Form({ route, method }) {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
                 navigate("/")
-            } else {
+                setTimeout(()=>{alert("You are Logged in !!");},500);
+                
+            }
+            else if (method==="register")
+            {
+                navigate("/login");
+                setTimeout(()=>{alert("Thank you to Register !! Log in to your account.");},500); 
+            }
+            else {
                 navigate("/login")
             }
         } catch (error) {
-            alert(error)
+            if (method === "login") {
+                // Show specific error alert for login
+                alert(`Login failed: ${error.response?.data?.message || 'An error occurred.Try again with CORRECT Credentials.'}`);
+            } else {
+                // Show specific error alert for registration
+                alert(`Registration failed: ${error.response?.data?.message || 'An error occurred.Try again with other Credentials.'}`);
+            }
         } finally {
             setLoading(false)
         }
