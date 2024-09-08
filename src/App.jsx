@@ -11,6 +11,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { Button } from 'react-bootstrap';
 import CustomNavbar from "./pages/CustomNavbar";
 import Footer from "./components/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Logout() {
   localStorage.clear();
