@@ -49,14 +49,14 @@ function Note({ note, onDelete, onUpdate }) {
                         value={editContent}
                         onChange={(e) => setEditContent(e.target.value)}
                     />
-                    <label>
+                    <label style={{ display: 'flex', alignItems: 'center', marginLeft: '1px', fontSize:"18px"}}>
                         <input
                             type="checkbox"
                             checked={isCompleted}
                             onChange={handleCheckboxChange}
-                            style={{display:"inline"}}
+                            style={{ marginRight: '2px' ,width:"5vw",height:"2.4vh"}}
                         />
-                        Completed
+                        Completed?
                     </label>
                     <br />
                     <button className="edit-button mx-2" type="submit">Update</button>
