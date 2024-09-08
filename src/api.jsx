@@ -8,7 +8,7 @@ import { ACCESS_TOKEN } from "./constants";
 
 const api = axios.create({
   // baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
-  baseURL:"https://e-krisshak-backend.vercel.app/",
+  baseURL:"https://lineup-backend.vercel.app/",
 });
 
 api.interceptors.request.use(
