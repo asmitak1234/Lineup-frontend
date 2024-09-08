@@ -49,12 +49,11 @@ function Note({ note, onDelete, onUpdate }) {
                         value={editContent}
                         onChange={(e) => setEditContent(e.target.value)}
                     />
-                    <label style={{display:"inline-block"}}>
+                    <label style={{display:"flex",justifyItems:'center'}}>
                         <input
                             type="checkbox"
                             checked={isCompleted}
                             onChange={handleCheckboxChange}
-                            style={{display:"inline-block"}}
                         />
                         Completed
                     </label>
