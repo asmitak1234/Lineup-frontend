@@ -25,19 +25,19 @@ function RegisterAndLogout() {
 function App() {
   // Define form content for Home page
   const formContentHome = {
-    content: <Button type="submit" variant="light">Log out</Button>,
+    content: <Button type="submit" variant="primary" className="btn-lg mt-2">Log out</Button>,
     onSubmit: Logout,
   };
 
   // Define form content for Login page
   const formContentLogin = {
-    content: <Button variant="light" onClick={() => window.location.href = '/register'}>Register</Button>,
+    content: <Button variant="primary" className="btn-lg mt-2" onClick={() => window.location.href = '/register'}>Register</Button>,
     onSubmit: () => {},
   };
 
   // Define form content for Register page
   const formContentRegister = {
-    content: <Button variant="light" onClick={() => window.location.href = '/login'}>Login</Button>,
+    content: <Button variant="primary" className="btn-lg mt-2" onClick={() => window.location.href = '/login'}>Login</Button>,
     onSubmit: () => {},
   };
 

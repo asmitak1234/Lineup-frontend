@@ -1,73 +1,158 @@
- <!-- /* // # Made By - Asmita Kumari */ -->
+<!-- Made by- Asmita Kumari -->
+
+# LineUp-Frontend
+<!-- explaining setup,functionalities, and deployment steps. -->
 
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Hello Everyone, I am ASMITA KUMARI , a young learner and i am here with frontend part of my project called "LineUp" .It is a Task Manager or To-Do List App that helps everyone to manage their daily life tasks with proper details like Title,Description,Created on,Completed or not.This is a simple ,secure and efficient tool to store and order tasks according to their completion status. I am making this project with the intension of helping everyone to not forget the more important tasks they have to do in a day. This project is a React based App with Backend managed with Django (Rest Framework) with MySQL as a Database with proper CRUD(Create,Read,Uodate and Delete) Operations.
 
-In the project directory, you can run:
+This project is a React-based full-stack CRUD(Create, Read, Update, Delete) Web Application that interfaces with a Django backend and uses a MySQL Database for persistent data storage with. The frontend communicates with the backend via RESTful APIs. This README outlines how to set up the project, its main functionalities, and steps for deployment of frontend of this project.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Requirements](#requirements)
+- [Setup](#setup)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Connection](#connection)
+- [Functionalities](#functionalities)
+- [Deployment](#deployment)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requirements
 
-### `npm test`
+- Node.js 14 or higher
+- npm (or yarn) for managing JavaScript packages
+- Python 3.8 or higher for the Django backend
+- MySQL server for the database
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `npm run build`
+### Backend Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before setting up the React frontend, ensure the Django backend is properly configured. This project assumes you have an existing Django backend with a MySQL database.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. *Clone the Backend Repository*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Clone the Django project repository if you haven’t already:
 
-### `npm run eject`
+   bash:
+   git clone https://github.com/asmitak1234/LineUp-backend.git
+   cd lineupbackend
+   
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. *Create and Activate a Virtual Environment*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   bash:
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. *Install Backend Dependencies*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   bash:
+   pip install -r requirements.txt
+   
 
-## Learn More
+4. *Configure MySQL Database*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   - Ensure MySQL is running.
+   - Update the settings.py in the Django project to connect to your MySQL database.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. *Apply Migrations and Run the Server*
 
-### Code Splitting
+   bash:
+   python manage.py migrate
+   python manage.py runserver
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   The Django backend should be running on http://localhost:8000.
 
-### Analyzing the Bundle Size
+### Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. *Clone the Frontend Repository*
 
-### Making a Progressive Web App
+   bash
+   git clone https://github.com/asmitak1234/Lineup-frontend.git
+   cd lineupfrontend
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. *Install Frontend Dependencies*
 
-### Advanced Configuration
+   bash
+   npm install  # or yarn install
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. *Environment Variables*
 
-### Deployment
+   Create a .env file in the root of your project to configure environment variables.
+   Include this file in the .gitignore file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+4. *Start the Development Server*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   bash
+   npm start  # or yarn start
+   
+
+   The React app should be running on http://localhost:3000 and will communicate with the Django backend.
+
+## Connection 
+
+- *Frontend-Backend*: Frontend and Backend is connected by Axios library.
+
+## Functionalities
+
+- *User Interface*: A responsive and dynamic user interface built with React.
+- *API Integration*: Fetches and posts data to/from the Django backend using RESTful API endpoints.
+- *Form Handling*: User input and form submissions are handled with proper validation mechanisms.
+- *User Authentication*: Handles user authentication (login, register) through API calls to the Django backend and gives alert to user.
+- *Navigation*: Users can navigate to different web pages(Tasks,Login,Logout,Register) through the Buttons on Navigation Bar.
+- *CRUD Operations*: Perform create, read, update, and delete operations on the main resources.
+- *Details of Tasks*: Details of tasks like Title,Description,Created on,Completion Status is available.
+- *Ordering*: Tasks are automatically ordered according to the Completion status.
+
+## Deployment
+
+### Frontend Deployment
+This React frontend project is deployed on Vercel. Follow the steps below to deploy your frontend application:
+
+#### Prerequisites
+   - Make sure you have a Vercel account. You can sign up at Vercel.
+   - Ensure your frontend code is pushed to a Git repository (GitHub, GitLab, or Bitbucket).
+
+#### Steps to Deploy
+
+   1. *Connect Your Repository*:
+
+      - Log in to your Vercel dashboard.
+      - Click on the "New Project" button.
+      - Choose the Git provider where your frontend repository is hosted.
+      - Authorize Vercel to access your repository.
+      - Select the repository for your frontend project.
+
+   2. *Configure Build Settings*:
+
+      - Vercel will automatically detect the framework and settings for React. If not, you can manually specify the build settings.
+      - For React, the default build command is npm run build or yarn build.
+      - The output directory is typically build for React projects.
+
+   3. *Environment Variables*:
+
+      - Add any necessary environment variables by navigating to the "Environment Variables" section in the Vercel project settings.
+      - Ensure you add variables like CORS_ALLOWED_ORIGINS to point to your Django backend API.
+
+   4. *Deploy Your Project*:
+
+      - Click on the "Deploy" button.
+      -  Vercel will build and deploy your project. You can monitor the deployment progress on the Vercel dashboard.
+      - Once the deployment is complete, you will receive a live URL where your frontend application is accessible.
+
+   5. *Continuous Deployment*:
+
+      - Whenever you push changes to the connected repository, Vercel will automatically rebuild and redeploy your frontend application.
+      - Ensure your branch is set up correctly to trigger deployments as needed.
+
+
