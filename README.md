@@ -38,21 +38,18 @@ Before setting up the React frontend, ensure the Django backend is properly conf
 
    Clone the Django project repository if you haven’t already:
 
-   bash:
    git clone https://github.com/asmitak1234/LineUp-backend.git
    cd lineupbackend
    
 
 2. *Create and Activate a Virtual Environment*
 
-   bash:
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    
 
 3. *Install Backend Dependencies*
 
-   bash:
    pip install -r requirements.txt
    
 
@@ -63,7 +60,6 @@ Before setting up the React frontend, ensure the Django backend is properly conf
 
 5. *Apply Migrations and Run the Server*
 
-   bash:
    python manage.py migrate
    python manage.py runserver
    
@@ -74,14 +70,12 @@ Before setting up the React frontend, ensure the Django backend is properly conf
 
 1. *Clone the Frontend Repository*
 
-   bash
    git clone https://github.com/asmitak1234/Lineup-frontend.git
    cd lineupfrontend
    
 
 2. *Install Frontend Dependencies*
 
-   bash
    npm install  # or yarn install
    
 
@@ -93,7 +87,6 @@ Before setting up the React frontend, ensure the Django backend is properly conf
 
 4. *Start the Development Server*
 
-   bash
    npm start  # or yarn start
    
 
