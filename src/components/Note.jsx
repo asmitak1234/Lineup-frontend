@@ -4,6 +4,8 @@
 import React, { useState } from "react";
 import "../styles/Note.css";
 import api from "../api";
+import { FaEdit } from 'react-icons/fa'
+import { RiDeleteBin5Line } from 'react-icons/ri'
 
 function Note({ note, onDelete, onUpdate }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -30,6 +32,12 @@ function Note({ note, onDelete, onUpdate }) {
 
     const handleCheckboxChange = () => {
         setIsCompleted(!isCompleted);
+    };
+
+    const handleDelete = () => {
+        if (window.confirm(`Are you sure you want to delete this note with title "${note.title}"?`)) {
+            onDelete(note.id);
+        }
     };
 
     return (
@@ -72,11 +80,11 @@ function Note({ note, onDelete, onUpdate }) {
                     <div className="note-footer">
                         <p className="note-date">{formattedDate}</p>
                     </div>
-                    <button className="delete-button" onClick={() => onDelete(note.id)}>
-                        Delete
+                    <button className="delete-button" onClick={handleDelete}>
+                    <RiDeleteBin5Line/>
                     </button>
                     <button className="edit-button mx-2" onClick={() => setIsEditing(true)}>
-                        Edit
+                    <FaEdit/>
                     </button>
                 </>
             )}

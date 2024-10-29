@@ -13,6 +13,7 @@ import CustomNavbar from "./pages/CustomNavbar";
 import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 // function Logout() {
 //   localStorage.clear();
 //   return <Navigate to="/login" />;
@@ -36,19 +37,19 @@ function RegisterAndLogout() {
 function App() {
   // Define form content for Home page
   const formContentHome = {
-    content: <Button type="submit" className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }}>Log out</Button>,
+    content: <Button type="submit" variant="dark" className="btn-lg mt-2" style={{ border: '3px inset white',}}>Log out</Button>,
     onSubmit: Logout,
   };
 
   // Define form content for Login page
   const formContentLogin = {
-    content: <Button className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }} onClick={() => window.location.href = '/register'}>Register</Button>,
+    content: <Button variant="dark" className="btn-lg mt-2" style={{ border: '3px inset white',}} onClick={() => window.location.href = '/register'}>Register</Button>,
     onSubmit: () => {},
   };
 
   // Define form content for Register page
   const formContentRegister = {
-    content: <Button className="btn-lg mt-2" style={{ border: '3px inset white',backgroundColor:'rgba(88, 85, 85, 0.514)',color:'white' }} onClick={() => window.location.href = '/login'}>Login</Button>,
+    content: <Button variant="dark" className="btn-lg mt-2" style={{ border: '3px inset white',}} onClick={() => window.location.href = '/login'}>Login</Button>,
     onSubmit: () => {},
   };
 

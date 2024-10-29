@@ -9,9 +9,9 @@ export default function Footer(){
   return (
     <CDBModalFooter className="shadow mx-auto px-4" style={{ height:"15vh", borderRadius:"10px",
       position: "relative",
-      marginTop:"40vh",
+      marginTop:"30vh",
       bottom: 0,
-      left: "40vw",
+      left: "30vw",
       width:"60%",
       transform: "translateX(-50%)",
       zIndex:1000,
