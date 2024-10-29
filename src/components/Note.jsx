@@ -35,7 +35,7 @@ function Note({ note, onDelete, onUpdate }) {
     };
 
     const handleDelete = () => {
-        if (window.confirm(`Are you sure you want to delete this note with title "${note.title}"?`)) {
+        if (window.confirm(`Are you Sure you want to DELETE this note with title "${note.title}"?`)) {
             onDelete(note.id);
         }
     };
