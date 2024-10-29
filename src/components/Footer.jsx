@@ -12,7 +12,7 @@ export default function Footer(){
       marginTop:"30vh",
       bottom: 0,
       left: "30vw",
-      width:"60%",
+      width:"70%",
       transform: "translateX(-50%)",
       zIndex:1000,
       }} >
