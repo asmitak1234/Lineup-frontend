@@ -37,15 +37,44 @@ function Form({ route, method }) {
             else {
                 navigate("/login")
             }
-        } catch (error) {
-            if (method === "login") {
-                // Show specific error alert for login
-                alert(`Login failed: ${error.response?.data?.message || 'An error occurred.Try again with CORRECT Credentials.'}`);
-            } else {
-                // Show specific error alert for registration
-                alert(`Registration failed: ${error.response?.data?.message || 'An error occurred.Try again with other Credentials.'}`);
+        }
+        //  catch (error) {
+        //     if (method === "login") {
+        //         // Show specific error alert for login
+        //         alert(`Login failed: ${error.response?.data?.message || 'An error occurred.Try again with CORRECT Credentials.'}`);
+        //     } else {
+        //         // Show specific error alert for registration
+        //         alert(`Registration failed: ${error.response?.data?.message || 'An error occurred.Try again with other Credentials.'}`);
+        //     }
+        // }
+        catch (error) {
+            let errorMessage = 'An error occurred. Please try again.';
+        
+            // Check if there's a response from the server
+            if (error.response) {
+                if (method === "login") {
+                    // Handle login errors
+                    errorMessage = error.response.data.message || 'Login failed: Incorrect credentials.';
+                } else {
+                    // Handle registration errors
+                    // Assuming validation errors might be in a specific format
+                    if (error.response.data) {
+                        // Extract validation error messages
+                        const validationErrors = error.response.data; // Adjust this based on your API response structure
+                        errorMessage = `Registration failed:\n${Object.entries(validationErrors)
+                            .map(([field, messages]) => `${field}: ${messages.join(', ')}`)
+                            .join('\n')}`;
+                    } else {
+                        errorMessage = 'Registration failed: Please check your input.';
+                    }
+                }
             }
-        } finally {
+        
+            // Display the error message
+            alert(errorMessage);
+        }
+        
+         finally {
             setLoading(false)
         }
     };

@@ -26,7 +26,7 @@
     width: 95%;
     padding: 10px;
     margin: 20px 0;
-    background-color: #007bff;
+    background-color: rgba(36, 34, 34, 0.514);
     color: white;
     border: none;
     border-radius: 4px;
@@ -35,5 +35,5 @@
   }
   
   .form-button:hover {
-    background-color: #0056b3;
+    background-color: rgba(18, 17, 17, 0.715);
   }
